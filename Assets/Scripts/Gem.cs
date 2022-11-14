@@ -17,6 +17,7 @@ public class Gem : MonoBehaviour
     {
         if (collision.transform.tag.Equals("Platform")) {
             impact.GetComponent<ParticleSystemRenderer>().material = transform.GetComponent<MeshRenderer>().material;
+            FindObjectOfType<AnimationController>().playAnimation();
             Instantiate(impact, collision.GetContact(0).point, Quaternion.identity);
             FindObjectOfType<Spawner>().incrementScore();
             Destroy(this.gameObject);

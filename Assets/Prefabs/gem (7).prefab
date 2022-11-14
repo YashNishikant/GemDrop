@@ -127,6 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impact: {fileID: 7029842713139878439, guid: 98b9cac20429ae548a7e1bf3bfc373c8, type: 3}
   spawn: {fileID: 7029842713139878439, guid: 6d8d450b97668954d926a1b8c94965d7, type: 3}
+  platformImpact: {fileID: 6561618192169630466, guid: 2f00479b041a9e24fb1ff6c0599b2e07,
+    type: 3}
 --- !u!114 &-3600481421424326646
 MonoBehaviour:
   m_ObjectHideFlags: 0
