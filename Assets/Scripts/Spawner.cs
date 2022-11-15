@@ -10,9 +10,7 @@ public class Spawner : MonoBehaviour
     private float time;
     private float timechanged;
     private bool spawn;
-    private float score;
     [SerializeField] float interval;
-    [SerializeField] private Text t;
     [SerializeField] private List<GameObject> gemList;
     [SerializeField] private List<Material> skyboxList;
 
@@ -34,16 +32,11 @@ public class Spawner : MonoBehaviour
             }
         }
 
-        if ((int)time != timechanged) {
+        if ((int)time != timechanged)
+        {
             spawn = true;
         }
 
-        t.text = "Score: " + score;
-
-    }
-
-    public void incrementScore() {
-        score++;
     }
 
 }

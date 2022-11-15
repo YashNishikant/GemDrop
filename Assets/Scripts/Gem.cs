@@ -11,6 +11,7 @@ public class Gem : MonoBehaviour
     void Start()
     {
         Instantiate(spawn, transform.position, Quaternion.identity);
+        GetComponent<Animation>().Play("GemAnimation");
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -19,7 +20,7 @@ public class Gem : MonoBehaviour
             impact.GetComponent<ParticleSystemRenderer>().material = transform.GetComponent<MeshRenderer>().material;
             FindObjectOfType<AnimationController>().playAnimation();
             Instantiate(impact, collision.GetContact(0).point, Quaternion.identity);
-            FindObjectOfType<Spawner>().incrementScore();
+            FindObjectOfType<GameManager>().incrementScore();
             Destroy(this.gameObject);
         }
     }
