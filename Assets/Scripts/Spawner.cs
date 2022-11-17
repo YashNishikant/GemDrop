@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
     private float time;
     private float timechanged;
     private bool spawn;
-    [SerializeField] float interval;
+    [SerializeField] private float interval;
     [SerializeField] private List<GameObject> gemList;
     [SerializeField] private List<Material> skyboxList;
 

@@ -267,7 +267,6 @@ MonoBehaviour:
   gemList:
   - {fileID: 1312125520987682, guid: 4d6f0f78653e7914d85e499c06fa107c, type: 3}
   - {fileID: 1735989688514166, guid: 2289c35965983a040bcf78406c4bca84, type: 3}
-  - {fileID: 1557621410003514, guid: 6fbfd7a6a74bd644bb16c7898c82c6e3, type: 3}
   - {fileID: 1517422845108830, guid: 32a04752c6abc7248a52fec3710e46cb, type: 3}
   - {fileID: 1734514868268080, guid: f5a4d8fd25dada542b237b2210ec8d21, type: 3}
   - {fileID: 1092556133920924, guid: d73aa743c36cc404eb022759c7de03c3, type: 3}
@@ -275,7 +274,7 @@ MonoBehaviour:
   - {fileID: 1022539648154954, guid: 1dc36efe545ecdc479d916feb2d9157b, type: 3}
   - {fileID: 1500845622016370, guid: b358a367e795df644aacb9ea9ecbe823, type: 3}
   - {fileID: 1009303430855048, guid: f0e79ec62c6e3704ca643a34ea1e3143, type: 3}
-  - {fileID: 1795720880141532, guid: ebbbf08e07a9b63418975852a2e69507, type: 3}
+  - {fileID: 1795720880141532, guid: d695420afa5c09b4491eb6deb92d7393, type: 3}
   skyboxList:
   - {fileID: 2100000, guid: cd023dc5848aa0e409e2497f9c747bad, type: 2}
   - {fileID: 2100000, guid: 45abb82a8bfd64446b923e2f96924fdb, type: 2}

@@ -26,5 +26,33 @@ public class PlatformController : MonoBehaviour
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
         }
 
+        limitValueX(20f);
+        limitValueZ(12f);
+
+
     }
+
+    void limitValueX(float val)
+    {
+        if (transform.position.x < -val)
+        {
+            transform.position = new Vector3(-val, transform.position.y, transform.position.z);
+        }
+        if (transform.position.x > val)
+        {
+            transform.position = new Vector3(val, transform.position.y, transform.position.z);
+        }
+    }
+
+    void limitValueZ(float val) {
+        if (transform.position.z < -val)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -val);
+        }
+        if (transform.position.z > val)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, val);
+        }
+    }
+
 }
