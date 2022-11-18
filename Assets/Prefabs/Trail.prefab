@@ -9,9 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4533869319500773103}
-  - component: {fileID: 5361987334806350523}
   - component: {fileID: 2198988964202158649}
   - component: {fileID: 1633277439735321604}
+  - component: {fileID: 3246548384756144866}
+  - component: {fileID: -9223060693029351652}
+  - component: {fileID: 7858131929311220586}
+  - component: {fileID: -3562888435139844797}
   m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
@@ -33,19 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5361987334806350523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4632203200309293556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03307749227f6274888f65adf8756178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  limit: 1
 --- !u!198 &2198988964202158649
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -54,13 +44,13 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4632203200309293556}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 10
   simulationSpeed: 4
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4767,3 +4757,57 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!54 &3246548384756144866
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4632203200309293556}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &-9223060693029351652
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4632203200309293556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7858131929311220586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4632203200309293556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163e47609267180478baf858ce86dd11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3562888435139844797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4632203200309293556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03307749227f6274888f65adf8756178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limit: 5
