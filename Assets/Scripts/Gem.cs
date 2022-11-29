@@ -21,7 +21,9 @@ public class Gem : MonoBehaviour
             FindObjectOfType<AnimationController>().playAnimation();
             Instantiate(impact, collision.GetContact(0).point, Quaternion.identity);
             FindObjectOfType<GameManager>().incrementScore();
-            Destroy(this.gameObject);
+            Destroy(transform.GetComponent<MeshRenderer>());
+            Destroy(transform.GetComponent<BoxCollider>());
+            transform.GetChild(0).GetComponent<ParticleSystem>().Stop();
         }
     }
 

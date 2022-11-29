@@ -6,8 +6,10 @@ using UnityEngine.UIElements;
 public class PlatformController : MonoBehaviour
 {
 
-    [SerializeField] private float speed; 
-    
+    [SerializeField] private float speed;
+
+    float f = 20;
+
     void Update()
     {
 
@@ -26,10 +28,10 @@ public class PlatformController : MonoBehaviour
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
         }
 
-        limitValueX(20f);
-        limitValueZ(12f);
-
-
+        f = 20+transform.position.z/2;
+        limitValueX(f);
+        limitValueZ(20f);
+        
     }
 
     void limitValueX(float val)
@@ -42,12 +44,14 @@ public class PlatformController : MonoBehaviour
         {
             transform.position = new Vector3(val, transform.position.y, transform.position.z);
         }
+
     }
 
     void limitValueZ(float val) {
-        if (transform.position.z < -val)
+
+        if (transform.position.z < 1)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -val);
+            transform.position = new Vector3(transform.position.x, transform.position.y, 1);
         }
         if (transform.position.z > val)
         {

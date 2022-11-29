@@ -7,8 +7,10 @@ public class Collide : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(!collision.transform.tag.Equals("Gem"))
+        if (!collision.transform.tag.Equals("Gem")) { 
             Destroy(transform.GetComponent<Rigidbody>());
+            transform.GetComponent<ParticleSystem>().Stop();
+        }
     }
 
 }
