@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        scoretext.text = "Score: " + score;
+        scoretext.text = ""+score;
         if (score >= 10)
         {
             gameQuit.text = "PRESS SPACE TO QUIT";
